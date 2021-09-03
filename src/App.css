@@ -216,6 +216,21 @@ a:hover {
   font-family: "Montserrat", sans-serif;
 }
 
+.albumtext1 {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.albumtext2 {
+  letter-spacing: -1px;
+}
+
+.spanstyle1 {
+  padding-right: 3px;
+  padding-top: 3px;
+  display: inline-block;
+}
+
 .card {
   background-color: rgba(124, 124, 124, 0.3) !important;
   height: 90%;
@@ -652,4 +667,139 @@ h6 {
 a.custom-card,
 a.custom-card:hover {
   color: inherit;
+}
+
+/* Album Page */
+/*           */
+/*           */
+/*           */
+/*           */
+/*           */
+
+.covercontent {
+  height: 37vh;
+  background: rgb(163, 57, 132);
+  background: linear-gradient(
+    180deg,
+    rgba(163, 57, 132, 1) 29%,
+    rgba(87, 31, 71, 1) 80%
+  );
+  padding: 0;
+  display: flex;
+  width: 87vw;
+  margin: 0;
+}
+
+.bohemian {
+  max-width: 240px;
+  max-height: 240px;
+  padding: 0;
+  border: none;
+  margin-left: 30px;
+  box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+  margin-right: 30px;
+  float: left;
+  margin-top: auto;
+  margin-bottom: 25px;
+}
+.albumcovertext {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+.albumcovertextsmall {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(207, 207, 207);
+}
+.covertextbox {
+  margin-top: auto;
+  margin-bottom: 25px;
+}
+.coverbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.albumtableheader {
+  color: rgb(173, 173, 173);
+  font-size: 12px;
+}
+
+.titletext {
+  font-weight: 500;
+  color: white;
+  font-size: 15px;
+}
+
+.alttext {
+  color: rgb(156, 156, 156);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+.tablenumbers {
+  color: rgb(156, 156, 156);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.table td,
+.table th {
+  border-top: none;
+}
+.table thead th {
+  border-bottom: 1px solid #5e5e5e73;
+  padding-bottom: 8px;
+}
+
+.playbutton {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background-color: rgb(65, 155, 65);
+  border-radius: 50%;
+}
+
+.playicon {
+  position: absolute;
+  top: 18px;
+  left: 19px;
+}
+
+.bodycontent {
+  background: rgb(66, 23, 54);
+  background: linear-gradient(
+    180deg,
+    rgba(66, 23, 54, 0.9108018207282913) 10%,
+    rgba(66, 23, 54, 0.24693627450980393) 24%,
+    rgba(66, 23, 54, 0.036852240896358524) 35%,
+    rgba(66, 23, 54, 0) 45%
+  );
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 87vw;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 30px;
+}
+
+.queensmallImg {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 3px;
+}
+
+.artistLink {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+.artistLink:hover {
+  text-decoration: underline;
 }

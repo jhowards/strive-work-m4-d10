@@ -1,6 +1,6 @@
 import { Row, Col } from "react-bootstrap";
 import React, { Component } from "react";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class AlbumList extends Component {
   state = {
@@ -43,26 +43,27 @@ class AlbumList extends Component {
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-5 firstsection">
         {this.state.albums.map((album) => (
           <div key={album.id} className="col pr-2">
-            <BrowserRouter>
-              <Link to="/album:id" style={{ textDecoration: "none" }}>
-                <div className="card morningcard mb-3">
-                  <div className="row no-gutters">
-                    <div className="col-md-3">
-                      <img
-                        className="card-img morningimg"
-                        src={album.album.cover_medium}
-                        alt="..."
-                      ></img>
-                    </div>
-                    <div className="col-md-9">
-                      <div className="card-body ml-2">
-                        <p className="card-text">{album.title}</p>
-                      </div>
+            <Link
+              to={"/album/" + album.album.id}
+              style={{ textDecoration: "none" }}
+            >
+              <div className="card morningcard mb-3">
+                <div className="row no-gutters">
+                  <div className="col-md-3">
+                    <img
+                      className="card-img morningimg"
+                      src={album.album.cover_medium}
+                      alt="..."
+                    ></img>
+                  </div>
+                  <div className="col-md-9">
+                    <div className="card-body ml-2">
+                      <p className="card-text">{album.album.title}</p>
                     </div>
                   </div>
                 </div>
-              </Link>
-            </BrowserRouter>
+              </div>
+            </Link>
           </div>
         ))}
       </div>

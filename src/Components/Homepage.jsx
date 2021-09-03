@@ -27,7 +27,7 @@ const Homepage = () => {
         <AlbumList />
       </div>
       <div className="container-fluid mt-5">
-        <section>
+        {/* <section>
           <div className=" d-flex align-items-center justify-content-between">
             <h5 className="font-weight-bold text-white ">Recently played</h5>
             <small className="text-white font-weight-bold text-muted">
@@ -55,7 +55,7 @@ const Homepage = () => {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );
