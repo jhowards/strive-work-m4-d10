@@ -1,26 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../spotifylogo.svg";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-brand">
         <Link to="/">
-          <img src="spotifylogo.svg" alt="Spotify Logo" className="logo"></img>
+          <img src={logo} alt="Spotify Logo" className="logo"></img>
         </Link>
       </div>
       <ul className="sidebar-nav flex-column">
         <li className="sidelistcurrent">
-          <a className="navitem" href="#">
-            <span
-              className="iconify mr-3"
-              data-icon="el:home"
-              data-inline="false"
-              data-width="20px"
-              data-height="20px"
-            ></span>
-            Home
-          </a>
+          <Link
+            to="/"
+            style={{ textDecoration: "none", color: "rgb(166, 166, 166)" }}
+          >
+            <a className="navitem">
+              <span
+                className="iconify mr-3"
+                data-icon="el:home"
+                data-inline="false"
+                data-width="20px"
+                data-height="20px"
+              ></span>
+              Home
+            </a>
+          </Link>
         </li>
         <li className="sidelist" data-toggle="modal">
           <a className="navitem" href="#">
@@ -42,7 +48,7 @@ const Sidebar = () => {
             </span>
           </a>
         </li>
-        <li className="sidelist">Your Library</li>
+        <li className="sidelist ml-4">Your Library</li>
         <br />
         <li className="sidelist mt-2">
           <a className="navitem" href="#">

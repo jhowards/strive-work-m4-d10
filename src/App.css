@@ -748,10 +748,10 @@ a.custom-card:hover {
 }
 .table td,
 .table th {
-  border-top: none;
+  border-top: none !important;
 }
 .table thead th {
-  border-bottom: 1px solid #5e5e5e73;
+  border-bottom: 1px solid #5e5e5e73 !important;
   padding-bottom: 8px;
 }
 
@@ -802,4 +802,151 @@ a.custom-card:hover {
 }
 .artistLink:hover {
   text-decoration: underline;
+}
+
+/*ARTIST PAGE CSS*/
+
+.grow {
+  transition: all 0.15s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.05);
+}
+
+div {
+  padding: 0;
+}
+h1 {
+  font-size: 6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+  color: white;
+}
+
+.artist-page {
+  width: 100%;
+}
+
+.artist_title-column {
+  padding-top: 8.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.artist-tracks {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 75%,
+    rgba(128, 128, 128, 1) 100%
+  );
+  width: 100%;
+}
+
+.playbutton {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(65, 195, 65);
+  border-radius: 50%;
+}
+
+.artist-tracks_commands {
+  width: 100%;
+}
+
+.artist-tracks_commands nav {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+
+.follow-button {
+  background-color: transparent;
+  border: 0.2px rgba(211, 211, 211, 0.171) solid;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.follow-button p {
+  font-size: 0.8em;
+  padding: 0.28rem;
+}
+
+.follow-button:hover {
+  border: 0.2px white solid;
+}
+
+.artist-more-options {
+  font-size: 2rem;
+  color: lightgray;
+  padding-bottom: 2.5rem;
+}
+
+.artist-more-options:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.music-artist-most-listened h3 {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.music-artist-most-listened div {
+  margin-left: 2rem;
+}
+
+.picture_frame img {
+  height: 45px;
+  width: 35px;
+  object-fit: cover;
+}
+
+.most-listened img {
+  padding-bottom: 14px;
+}
+
+.most-listened {
+  height: 50px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.most-listened:hover {
+  background-color: rgb(105, 105, 105, 0.4);
+  border-radius: 4px;
+  cursor: pointer;
+  height: 52px;
+}
+
+.play_artist-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12px 12px;
+  border-color: transparent transparent transparent white;
+  margin-left: 1.6rem;
+  margin-top: 1.1rem;
+}
+.artist_title {
+  background-image: url(./Queen-Jumbo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 45vh;
+  width: 100%;
 }

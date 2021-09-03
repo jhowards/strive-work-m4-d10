@@ -8,6 +8,7 @@ class AlbumList extends Component {
   };
 
   componentDidMount = async () => {
+    let albumsearch = "rock";
     try {
       var myHeaders = new Headers();
       myHeaders.append(
@@ -21,7 +22,8 @@ class AlbumList extends Component {
         redirect: "follow",
       };
       let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock",
+        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
+          albumsearch,
         requestOptions
       );
 

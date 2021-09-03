@@ -2,12 +2,20 @@ import React from "react";
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import { Spinner, Alert } from "react-bootstrap";
+import AlbumBodyContent from "./AlbumBodyContent";
+import { Link } from "react-router-dom";
 
 function AlbumPage() {
   const [albumDetails, setAlbumDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const { id } = useParams();
+
+  function convertDuration(duration) {
+    let hours = Math.floor(duration / 3600);
+    let minutes = Math.floor((duration - hours * 3600) / 60);
+    return hours + " hr " + minutes + " min";
+  }
 
   useEffect(() => {
     const fetchAlbum = async () => {
@@ -94,14 +102,21 @@ function AlbumPage() {
                 src={albumDetails.artist.picture_small}
               ></img>
             </span>
-            <span
-              class="albumcovertext mr-2"
-              style={{ fontSize: "13px", fontWeight: "700" }}
+            <Link
+              to={"/artist/" + albumDetails.artist.id}
+              style={{ textDecoration: "none" }}
             >
-              {albumDetails.artist.name}
-            </span>
+              <span
+                class="albumcovertext mr-2"
+                style={{ fontSize: "13px", fontWeight: "700" }}
+              >
+                {albumDetails.artist.name}
+              </span>
+            </Link>
             <span class="albumcovertextsmall">
-              • 2018 • {albumDetails.nb_tracks} songs, 1 hr 19 min
+              • {albumDetails.release_date.substring(0, 4)} •{" "}
+              {albumDetails.nb_tracks} songs,{" "}
+              {convertDuration(albumDetails.duration)}
             </span>
           </div>
         </div>
@@ -111,6 +126,7 @@ function AlbumPage() {
         <div class="container-fluid p-0 mb-3 d-flex">
           <div class="playbutton d-inline-block mr-4"></div>
         </div>
+        <AlbumBodyContent details={albumDetails} />
       </div>
     </div>
   );
