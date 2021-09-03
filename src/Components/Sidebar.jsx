@@ -6,15 +6,19 @@ const Sidebar = () => {
     <div className="sidebar">
       <Router>
         <div className="sidebar-brand">
-          <Link to="/index.html">
-            <img src="spotifylogo.svg" alt="Spotify Logo" class="logo"></img>
+          <Link to="/">
+            <img
+              src="spotifylogo.svg"
+              alt="Spotify Logo"
+              className="logo"
+            ></img>
           </Link>
         </div>
-        <ul class="sidebar-nav flex-column">
-          <li class="sidelistcurrent">
-            <a class="navitem" href="#">
+        <ul className="sidebar-nav flex-column">
+          <li className="sidelistcurrent">
+            <a className="navitem" href="#">
               <span
-                class="iconify mr-3"
+                className="iconify mr-3"
                 data-icon="el:home"
                 data-inline="false"
                 data-width="20px"
@@ -23,10 +27,10 @@ const Sidebar = () => {
               Home
             </a>
           </li>
-          <li class="sidelist" data-toggle="modal">
-            <a class="navitem" href="#">
+          <li className="sidelist" data-toggle="modal">
+            <a className="navitem" href="#">
               <span
-                class="iconify mr-3"
+                className="iconify mr-3"
                 data-icon="akar-icons:search"
                 data-inline="false"
                 data-width="20"
@@ -35,7 +39,7 @@ const Sidebar = () => {
 
               <span
                 type="button"
-                class=""
+                className=""
                 data-toggle="modal"
                 data-target="#exampleModal"
               >
@@ -43,47 +47,47 @@ const Sidebar = () => {
               </span>
             </a>
           </li>
-          <li class="sidelist">Your Library</li>
+          <li className="sidelist">Your Library</li>
           <br />
-          <li class="sidelist mt-2">
-            <a class="navitem" href="#">
+          <li className="sidelist mt-2">
+            <a className="navitem" href="#">
               Create Playlist
             </a>
           </li>
-          <li class="sidelist">
+          <li className="sidelist">
             {" "}
             <span id="heart">
               <div id="heartbox"></div>
             </span>
-            <a class="navitem" href="#">
+            <a className="navitem" href="#">
               Liked Songs
             </a>
           </li>
         </ul>
         <hr></hr>
-        <ul class="sidebar-playlists mb-2">
-          <li class="sideplaylist">
-            <a class="playlistitem" href="#">
+        <ul className="sidebar-playlists mb-2">
+          <li className="sideplaylist">
+            <a className="playlistitem" href="#">
               Funky Heavy Bluesy
             </a>
           </li>
-          <li class="sideplaylist">
-            <a class="playlistitem" href="#">
+          <li className="sideplaylist">
+            <a className="playlistitem" href="#">
               Your Top Songs 2020
             </a>
           </li>
-          <li class="sideplaylist">
-            <a class="playlistitem" href="#">
+          <li className="sideplaylist">
+            <a className="playlistitem" href="#">
               In Love With You - Erykah Badu
             </a>
           </li>
-          <li class="sideplaylist">
-            <a class="playlistitem" href="#">
+          <li className="sideplaylist">
+            <a className="playlistitem" href="#">
               This Is Rod Stewart
             </a>
           </li>
-          <li class="sideplaylist">
-            <a class="playlistitem" href="#">
+          <li className="sideplaylist">
+            <a className="playlistitem" href="#">
               FRANCHISE ft. Young Thug & M.I.A.
             </a>
           </li>
@@ -197,7 +201,7 @@ const Sidebar = () => {
           <p id="installapp">
             {" "}
             <span
-              class="iconify mr-2"
+              className="iconify mr-2"
               data-icon="bi:arrow-down-circle"
               data-inline="false"
               data-width="20"
